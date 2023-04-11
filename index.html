@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javbank</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Bienvenido a Javbank</h1>
+    <h2>Seleccione una cuenta:</h2>
+
+    <div>
+        <button class="show-mali">Mali</button>
+        <button class="show-gera">Gera</button>
+        <button class="show-maui">Maui</button>
+    </div>
+
+    <!-- CUENTAS -->
+
+    <form class="cuentaMali hidden">
+        <button class="closeCuenta">&times;</button>
+        <label for="" class="labelPass">Ingrese la contraseña correcta</label>
+        <input type="password" class="password" id="passwordMali" placeholder="qwerty"></input>
+        <input type="button" class="loginMali" value="Iniciar sesión" onclick="loginMali()">
+    </form>
+    
+    <form class="cuentaGera hidden">
+        <button class="closeCuenta">&times;</button>
+        <label for="" class="labelPass">Ingrese la contraseña correcta</label>
+        <input type="password" class="password" id="passwordGera" placeholder="123"></input>
+        <input type="button" class="loginGera" value="Iniciar sesión" onclick="loginGera()">
+    </form>
+    
+    <form class="cuentaMaui hidden">
+        <button class="closeCuenta">&times;</button>
+        <label for="" class="labelPass">Ingrese la contraseña correcta</label>
+        <input type="password" class="password" id="passwordMaui" placeholder="html"></input>
+        <input type="button" class="loginMaui" value="Iniciar sesión" onclick="loginMaui()">
+    </form>
+
+    <!-- MENUS (Estan en div y no en section para que la bienvenida y los botones no esten alineados) -->
+
+    <div class="menuMali hidden">
+        <div>
+            <button class="closeMenu" onclick="closeMenu()">&times;</button>
+        </div>
+        <aside>
+            <h2>¡Bienvenid@ Mali!</h2>
+        </aside>
+        <nav>
+            <button class="btn-consultMali" onclick="openConsultMali()">Consultar saldo</button>
+            <button class="btn-depositMali" onclick="openDepositMali()">Ingresar monto</button>
+            <button class="btn-withdrawMali" onclick="openWithdrawMali()">Retirar monto</button>
+        </nav>
+    </div>
+
+    <div class="menuGera hidden">
+        <div>
+            <button class="closeMenu" onclick="closeMenu()">&times;</button>
+        </div>
+        <aside>
+            <h2>¡Bienvenid@ Gera!</h2>
+        </aside>
+        <nav>
+            <button class="btn-consultGera" onclick="openConsultGera()">Consultar saldo</button>
+            <button class="btn-depositGera" onclick="openDepositGera()">Ingresar monto</button>
+            <button class="btn-withdrawGera" onclick="openWithdrawGera()">Retirar monto</button>
+        </nav>
+    </div>
+
+    <div class="menuMaui hidden">
+        <div>
+            <button class="closeMenu" onclick="closeMenu()">&times;</button>
+        </div>
+        <aside>
+            <h2>¡Bienvenid@ Maui!</h2>
+        </aside>
+        <nav>
+            <button class="btn-consultMaui" onclick="openConsultMaui()">Consultar saldo</button>
+            <button class="btn-depositMaui" onclick="openDepositMaui()">Ingresar monto</button>
+            <button class="btn-withdrawMaui" onclick="openWithdrawMaui()">Retirar monto</button>
+        </nav>
+    </div>
+
+    <!-- CONSULTAS -->
+
+    <section class="consultMali hidden">
+        <label for="" class="labelConsult">Tu saldo en pesos MXN es de: </label>
+        <input type="text" disabled="disabled" class="balanceMali" value="200"></input>
+        <button class="closeConsult" onclick="closeConsult()">&times;</button>
+    </section>
+
+    <section class="consultGera hidden">
+        <label for="" class="labelConsult">Tu saldo en pesos MXN es de: </label>
+        <input type="text" disabled="disabled" class="balanceGera" value="290"></input>
+        <button class="closeConsult" onclick="closeConsult()">&times;</button>
+    </section>
+
+    <section class="consultMaui hidden">
+        <label for="" class="labelConsult">Tu saldo en pesos MXN es de: </label>
+        <input type="text" disabled="disabled" class="balanceMaui" value="67"></input>
+        <button class="closeConsult" onclick="closeConsult()">&times;</button>
+    </section>
+
+    <!-- DEPOSITOS -->
+
+    <section class="depositMali hidden">
+        <label for="" class="labelDepWith">Ingrese la cantidad en pesos MXN a depositar: </label>
+        <input type="text" class="inputDepositMali"></input>
+        <input type="button" class="buttonDepWith" value="Depositar" onclick="formulaDepositMali()">
+        <button class="closeDeposit" onclick="closeDeposit()">&times;</button>
+    </section>
+
+    <section class="depositGera hidden">
+        <label for="" class="labelDepWith">Ingrese la cantidad en pesos MXN a depositar: </label>
+        <input type="text" class="inputDepositGera"></input>
+        <input type="button" class="buttonDepWith" value="Depositar" onclick="formulaDepositGera()">
+        <button class="closeDeposit" onclick="closeDeposit()">&times;</button>
+    </section>
+
+    <section class="depositMaui hidden">
+        <label for="" class="labelDepWith">Ingrese la cantidad en pesos MXN a depositar: </label>
+        <input type="text" class="inputDepositMaui"></input>
+        <input type="button" class="buttonDepWith" value="Depositar" onclick="formulaDepositMaui()">
+        <button class="closeDeposit" onclick="closeDeposit()">&times;</button>
+    </section>
+
+    <!-- RETIROS -->
+
+    <section class="withdrawMali hidden">
+        <label for="" class="labelDepWith">Ingrese la cantidad en pesos MXN a retirar: </label>
+        <input type="text" class="inputWithdrawMali"></input>
+        <input type="button" class="buttonDepWith" value="Retirar" onclick="formulaWithdrawMali()">
+        <button class="closeWithdraw" onclick="closeWithdraw()">&times;</button>
+    </section>
+
+    <section class="withdrawGera hidden">
+        <label for="" class="labelDepWith">Ingrese la cantidad en pesos MXN a retirar: </label>
+        <input type="text" class="inputWithdrawGera"></input>
+        <input type="button" class="buttonDepWith" value="Retirar" onclick="formulaWithdrawGera()">
+        <button class="closeWithdraw" onclick="closeWithdraw()">&times;</button>
+    </section>
+    
+    <section class="withdrawMaui hidden">
+        <label for="" class="labelDepWith">Ingrese la cantidad en pesos MXN a retirar: </label>
+        <input type="text" class="inputWithdrawMaui"></input>
+        <input type="button" class="buttonDepWith" value="Retirar" onclick="formulaWithdrawMaui()">
+        <button class="closeWithdraw" onclick="closeWithdraw()">&times;</button>
+    </section>
+
+    <!-- OVERLAYS -->
+
+    <div class="overlayCuentaMali hidden"></div>
+    <div class="overlayCuentaGera hidden"></div>
+    <div class="overlayCuentaMaui hidden"></div>
+    <div class="overlayMenu hidden"></div>
+    <div class="overlayConsult hidden"></div>
+    <div class="overlayDeposit hidden"></div>
+    <div class="overlayWithdraw hidden"></div>
+
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
