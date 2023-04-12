@@ -361,6 +361,15 @@ function closeWithdraw() {
 function formulaDepositMali() {
     let balance=parseInt(document.getElementsByClassName("balanceMali")[0].value);
     let deposit=parseInt(document.getElementsByClassName("inputDepositMali")[0].value);
+
+    if (isNaN(balance)) {
+        balance = 0;
+    }
+
+    if (isNaN(deposit)) {
+        deposit = 0;
+    }
+
     let totalBalance = balance + deposit;
 
     if (totalBalance > 990) {
@@ -377,6 +386,15 @@ function formulaDepositMali() {
 function formulaDepositGera() {
     let balance=parseInt(document.getElementsByClassName("balanceGera")[0].value);
     let deposit=parseInt(document.getElementsByClassName("inputDepositGera")[0].value);
+
+    if (isNaN(balance)) {
+        balance = 0;
+    }
+
+    if (isNaN(deposit)) {
+        deposit = 0;
+    }
+
     let totalBalance = balance + deposit;
 
     if (totalBalance > 990) {
@@ -393,6 +411,15 @@ function formulaDepositGera() {
 function formulaDepositMaui() {
     let balance=parseInt(document.getElementsByClassName("balanceMaui")[0].value);
     let deposit=parseInt(document.getElementsByClassName("inputDepositMaui")[0].value);
+
+    if (isNaN(balance)) {
+        balance = 0;
+    }
+
+    if (isNaN(deposit)) {
+        deposit = 0;
+    }
+
     let totalBalance = balance + deposit;
 
     if (totalBalance > 990) {
@@ -411,6 +438,15 @@ function formulaDepositMaui() {
 function formulaWithdrawMali() {
     let balance=parseInt(document.getElementsByClassName("balanceMali")[0].value);
     let withdraw=parseInt(document.getElementsByClassName("inputWithdrawMali")[0].value);
+
+    if (isNaN(balance)) {
+        balance = 0;
+    }
+
+    if (isNaN(withdraw)) {
+        withdraw = 0;
+    }
+    
     let totalBalance = balance - withdraw;
 
     if (totalBalance < 10) {
@@ -427,6 +463,15 @@ function formulaWithdrawMali() {
 function formulaWithdrawGera() {
     let balance=parseInt(document.getElementsByClassName("balanceGera")[0].value);
     let withdraw=parseInt(document.getElementsByClassName("inputWithdrawGera")[0].value);
+
+    if (isNaN(balance)) {
+        balance = 0;
+    }
+
+    if (isNaN(withdraw)) {
+        withdraw = 0;
+    }
+
     let totalBalance = balance - withdraw;
 
     if (totalBalance < 10) {
@@ -443,6 +488,15 @@ function formulaWithdrawGera() {
 function formulaWithdrawMaui() {
     let balance=parseInt(document.getElementsByClassName("balanceMaui")[0].value);
     let withdraw=parseInt(document.getElementsByClassName("inputWithdrawMaui")[0].value);
+
+    if (isNaN(balance)) {
+        balance = 0;
+    }
+
+    if (isNaN(withdraw)) {
+        withdraw = 0;
+    }
+
     let totalBalance = balance - withdraw;
 
     if (totalBalance < 10) {

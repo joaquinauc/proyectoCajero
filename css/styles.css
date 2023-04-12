@@ -68,6 +68,14 @@ form {
     cursor: pointer;
 }
 
+.show-mali:hover, .show-gera:hover, .show-maui:hover {
+    background-color: rgb(238, 237, 237);
+}
+
+.show-mali:active, .show-gera:active, .show-maui:active {
+    background-color: rgb(221, 220, 220);
+}
+
 /* BOTONES PARA CERRAR */
 
 .closeCuenta, .closeMenu, .closeConsult, .closeDeposit, 
@@ -160,6 +168,18 @@ form {
     cursor: pointer;
 }
 
+.btn-consultMali:hover, .btn-depositMali:hover, .btn-withdrawMali:hover, 
+.btn-consultGera:hover, .btn-depositGera:hover, .btn-withdrawGera:hover, 
+.btn-consultMaui:hover, .btn-depositMaui:hover, .btn-withdrawMaui:hover {
+    background-color: rgb(236, 221, 3);
+}
+
+.btn-consultMali:active, .btn-depositMali:active, .btn-withdrawMali:active, 
+.btn-consultGera:active, .btn-depositGera:active, .btn-withdrawGera:active, 
+.btn-consultMaui:active, .btn-depositMaui:active, .btn-withdrawMaui:active {
+    background-color: rgb(218, 203, 0);
+}
+
 /* CONTRASEÑA */
 
 .password {
@@ -185,6 +205,16 @@ form {
     color: #444;
     border-radius: 10rem;
     cursor: pointer;
+}
+
+.loginMali:hover, .loginGera:hover, .loginMaui:hover, 
+.buttonDepWith:hover {
+    background-color: rgb(236, 221, 3);
+}
+
+.loginMali:active, .loginGera:active, .loginMaui:active, 
+.buttonDepWith:active {
+    background-color: rgb(218, 203, 0);
 }
 
 /* CAJAS DE TEXTO */
