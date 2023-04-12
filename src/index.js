@@ -79,6 +79,8 @@ function loginMali() {
     return;
 }
 
+// Opciones de menú
+
 function openConsultMali() {
     consultMali.classList.remove("hidden");
     overlayConsult.classList.remove("hidden");
@@ -97,6 +99,41 @@ function openWithdrawMali() {
     withdrawMali.classList.remove("hidden");
     overlayWithdraw.classList.remove("hidden");
     closeMenu();
+    return;
+}
+
+// Botones para regresar
+
+function menuBackMali() {
+    menuMali.classList.add("hidden");
+    cuentaMali.classList.remove("hidden");
+    return;
+}
+
+function consultBackMali() {
+    consultMali.classList.add("hidden");
+    depositMali.classList.add("hidden");
+    withdrawMali.classList.add("hidden");
+    menuMali.classList.remove("hidden");
+    addOverlays();
+    return;
+}
+
+function depositBackMali() {
+    consultMali.classList.add("hidden");
+    depositMali.classList.add("hidden");
+    withdrawMali.classList.add("hidden");
+    menuMali.classList.remove("hidden");
+    addOverlays();
+    return;
+}
+
+function withdrawBackMali() {
+    consultMali.classList.add("hidden");
+    depositMali.classList.add("hidden");
+    withdrawMali.classList.add("hidden");
+    menuMali.classList.remove("hidden");
+    addOverlays();
     return;
 }
 
@@ -127,6 +164,8 @@ function loginGera() {
     return;
 }
 
+// Opciones de menú
+
 function openConsultGera() {
     consultGera.classList.remove("hidden");
     overlayConsult.classList.remove("hidden");
@@ -145,6 +184,41 @@ function openWithdrawGera() {
     withdrawGera.classList.remove("hidden");
     overlayWithdraw.classList.remove("hidden");
     closeMenu();
+    return;
+}
+
+// Botones para regresar
+
+function menuBackGera() {
+    menuGera.classList.add("hidden");
+    cuentaGera.classList.remove("hidden");
+    return;
+}
+
+function consultBackGera() {
+    consultGera.classList.add("hidden");
+    depositGera.classList.add("hidden");
+    withdrawGera.classList.add("hidden");
+    menuGera.classList.remove("hidden");
+    addOverlays();
+    return;
+}
+
+function depositBackGera() {
+    consultGera.classList.add("hidden");
+    depositGera.classList.add("hidden");
+    withdrawGera.classList.add("hidden");
+    menuGera.classList.remove("hidden");
+    addOverlays();
+    return;
+}
+
+function withdrawBackGera() {
+    consultGera.classList.add("hidden");
+    depositGera.classList.add("hidden");
+    withdrawGera.classList.add("hidden");
+    menuGera.classList.remove("hidden");
+    addOverlays();
     return;
 }
 
@@ -175,6 +249,8 @@ function loginMaui() {
     return;
 }
 
+// Opciones de menú
+
 function openConsultMaui() {
     consultMaui.classList.remove("hidden");
     overlayConsult.classList.remove("hidden");
@@ -194,6 +270,41 @@ function openWithdrawMaui() {
     withdrawMaui.classList.remove("hidden");
     overlayWithdraw.classList.remove("hidden");
     closeMenu();
+    return;
+}
+
+// Botones para regresar
+
+function menuBackMaui() {
+    menuMaui.classList.add("hidden");
+    cuentaMaui.classList.remove("hidden");
+    return;
+}
+
+function consultBackMaui() {
+    consultMaui.classList.add("hidden");
+    depositMaui.classList.add("hidden");
+    withdrawMaui.classList.add("hidden");
+    menuMaui.classList.remove("hidden");
+    addOverlays();
+    return;
+}
+
+function depositBackMaui() {
+    consultMaui.classList.add("hidden");
+    depositMaui.classList.add("hidden");
+    withdrawMaui.classList.add("hidden");
+    menuMaui.classList.remove("hidden");
+    addOverlays();
+    return;
+}
+
+function withdrawBackMaui() {
+    consultMaui.classList.add("hidden");
+    depositMaui.classList.add("hidden");
+    withdrawMaui.classList.add("hidden");
+    menuMaui.classList.remove("hidden");
+    addOverlays();
     return;
 }
 
@@ -260,6 +371,7 @@ function formulaDepositMali() {
     }
 
     document.getElementsByClassName("balanceMali")[0].value=(balance+deposit);
+    return;
 }
 
 function formulaDepositGera() {
@@ -275,6 +387,7 @@ function formulaDepositGera() {
     }
 
     document.getElementsByClassName("balanceGera")[0].value=(balance+deposit);
+    return;
 }
 
 function formulaDepositMaui() {
@@ -290,6 +403,7 @@ function formulaDepositMaui() {
     }
 
     document.getElementsByClassName("balanceMaui")[0].value=(balance+deposit);
+    return;
 }
 
 /* FORMULA WITHDRAW */
@@ -307,6 +421,7 @@ function formulaWithdrawMali() {
     }
 
     document.getElementsByClassName("balanceMali")[0].value=(balance-withdraw);
+    return;
 }
 
 function formulaWithdrawGera() {
@@ -322,6 +437,7 @@ function formulaWithdrawGera() {
     }
 
     document.getElementsByClassName("balanceGera")[0].value=(balance-withdraw);
+    return;
 }
 
 function formulaWithdrawMaui() {
@@ -337,6 +453,7 @@ function formulaWithdrawMaui() {
     }
 
     document.getElementsByClassName("balanceMaui")[0].value=(balance-withdraw);
+    return;
 }
 
 // Cerrar menu con overlay
@@ -350,7 +467,17 @@ document.addEventListener("keydown", function (event) {
     }
 })
 
-/* BUTTONS MALI */
+/* AÑADIR OVERLAYS */
+
+function addOverlays() {
+    overlayConsult.classList.add("hidden");
+    overlayDeposit.classList.add("hidden");
+    overlayWithdraw.classList.add("hidden");
+    overlayMenu.classList.remove("hidden");
+    return;
+}
+
+/* BOTONES MALI */
 
 mali.addEventListener("click", openCuentaMali);
 btnCloseCuenta.addEventListener("click", closeCuentaMali);
@@ -359,7 +486,7 @@ overlayConsult.addEventListener("click", closeConsult);
 overlayDeposit.addEventListener("click", closeDeposit);
 overlayWithdraw.addEventListener("click", closeWithdraw);
 
-/* BUTTONS GERA */
+/* BOTONES GERA */
 
 gera.addEventListener("click", openCuentaGera);
 btnCloseCuenta.addEventListener("click", closeCuentaGera);
@@ -368,7 +495,7 @@ overlayConsult.addEventListener("click", closeConsult);
 overlayDeposit.addEventListener("click", closeDeposit);
 overlayWithdraw.addEventListener("click", closeWithdraw);
 
-/* BUTTONS MAUI */
+/* BOTONES MAUI */
 
 maui.addEventListener("click", openCuentaMaui);
 btnCloseCuenta.addEventListener("click", closeCuentaMaui);

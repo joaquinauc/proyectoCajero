@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* ETIQUETAS */
+
 html {
    font-size: 10px; 
 }
@@ -52,6 +54,8 @@ form {
     flex-wrap: wrap;
 }
 
+/* BOTONES DE CUENTAS */
+
 .show-mali, .show-gera, .show-maui {
     font-size: 2rem;
     font-weight: 600;
@@ -71,6 +75,21 @@ form {
     position: absolute;
     top: 1.2rem;
     right: 2rem;
+    font-size: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 3rem;
+}
+
+/* BOTONES PARA REGRESAR */
+
+.menuBackMali, .consultBackMali, .depositBackMali, .withdrawBackMali, 
+.menuBackGera, .consultBackGera, .depositBackGera, .withdrawBackGera, 
+.menuBackMaui, .consultBackMaui, .depositBackMaui, .withdrawBackMaui {
+    position: absolute;
+    top: 1.2rem;
+    left: 2rem;
     font-size: #333;
     cursor: pointer;
     border: none;
@@ -102,6 +121,8 @@ form {
     font-size: 1.6rem;
 }
 
+/* TEXTO DE CONSULTA DE SALDO */
+
 .balanceMali, .balanceGera, .balanceMaui {
     border: none;
     background-color: white;
@@ -110,9 +131,21 @@ form {
     margin-left: 5px;
 }
 
+/* LABELS */
+
+.labelPass {
+    font-size: 20px;
+}
+
+.labelDepWith {
+    font-size: 20px;
+}
+
 .labelConsult {
     font-size: 3rem;
 }
+
+/* BOTONES DE MENÚ */
 
 .btn-consultMali, .btn-depositMali, .btn-withdrawMali, .btn-consultGera, .btn-depositGera, 
 .btn-withdrawGera, .btn-consultMaui, .btn-depositMaui, .btn-withdrawMaui {
@@ -127,6 +160,8 @@ form {
     cursor: pointer;
 }
 
+/* CONTRASEÑA */
+
 .password {
     font-style: italic;
     width: 230px;
@@ -139,13 +174,7 @@ form {
     text-align: center;
 }
 
-.labelPass {
-    font-size: 20px;
-}
-
-.labelDepWith {
-    font-size: 20px;
-}
+/* BOTONES PARA LOGIN, DEPOSITAR Y RETIRAR */
 
 .loginMali, .loginGera, .loginMaui, .buttonDepWith {
     font-size: 1.5rem;
@@ -157,6 +186,8 @@ form {
     border-radius: 10rem;
     cursor: pointer;
 }
+
+/* CAJAS DE TEXTO */
 
 .inputDepositMali, .inputDepositGera, .inputDepositMaui, .inputWithdrawMali, 
 .inputWithdrawGera, .inputWithdrawMaui {

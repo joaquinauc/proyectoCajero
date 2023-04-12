@@ -46,6 +46,7 @@
     <div class="menuMali hidden">
         <div>
             <button class="closeMenu" onclick="closeMenu()">&times;</button>
+            <button class="menuBackMali" onclick="menuBackMali()">&larr;</button>
         </div>
         <aside>
             <h2>¡Bienvenid@ Mali!</h2>
@@ -60,6 +61,7 @@
     <div class="menuGera hidden">
         <div>
             <button class="closeMenu" onclick="closeMenu()">&times;</button>
+            <button class="menuBackGera" onclick="menuBackGera()">&larr;</button>
         </div>
         <aside>
             <h2>¡Bienvenid@ Gera!</h2>
@@ -74,6 +76,7 @@
     <div class="menuMaui hidden">
         <div>
             <button class="closeMenu" onclick="closeMenu()">&times;</button>
+            <button class="menuBackMaui" onclick="menuBackMaui()">&larr;</button>
         </div>
         <aside>
             <h2>¡Bienvenid@ Maui!</h2>
@@ -91,18 +94,21 @@
         <label for="" class="labelConsult">Tu saldo en pesos MXN es de: </label>
         <input type="text" disabled="disabled" class="balanceMali" value="200"></input>
         <button class="closeConsult" onclick="closeConsult()">&times;</button>
+        <button class="consultBackMali" onclick="consultBackMali()">&larr;</button>
     </section>
 
     <section class="consultGera hidden">
         <label for="" class="labelConsult">Tu saldo en pesos MXN es de: </label>
         <input type="text" disabled="disabled" class="balanceGera" value="290"></input>
         <button class="closeConsult" onclick="closeConsult()">&times;</button>
+        <button class="consultBackGera" onclick="consultBackGera()">&larr;</button>
     </section>
 
     <section class="consultMaui hidden">
         <label for="" class="labelConsult">Tu saldo en pesos MXN es de: </label>
         <input type="text" disabled="disabled" class="balanceMaui" value="67"></input>
         <button class="closeConsult" onclick="closeConsult()">&times;</button>
+        <button class="consultBackMaui" onclick="consultBackMaui()">&larr;</button>
     </section>
 
     <!-- DEPOSITOS -->
@@ -112,6 +118,7 @@
         <input type="text" class="inputDepositMali"></input>
         <input type="button" class="buttonDepWith" value="Depositar" onclick="formulaDepositMali()">
         <button class="closeDeposit" onclick="closeDeposit()">&times;</button>
+        <button class="depositBackMali" onclick="depositBackMali()">&larr;</button>
     </section>
 
     <section class="depositGera hidden">
@@ -119,6 +126,7 @@
         <input type="text" class="inputDepositGera"></input>
         <input type="button" class="buttonDepWith" value="Depositar" onclick="formulaDepositGera()">
         <button class="closeDeposit" onclick="closeDeposit()">&times;</button>
+        <button class="depositBackGera" onclick="depositBackGera()">&larr;</button>
     </section>
 
     <section class="depositMaui hidden">
@@ -126,6 +134,7 @@
         <input type="text" class="inputDepositMaui"></input>
         <input type="button" class="buttonDepWith" value="Depositar" onclick="formulaDepositMaui()">
         <button class="closeDeposit" onclick="closeDeposit()">&times;</button>
+        <button class="depositBackMaui" onclick="depositBackMaui()">&larr;</button>
     </section>
 
     <!-- RETIROS -->
@@ -135,6 +144,7 @@
         <input type="text" class="inputWithdrawMali"></input>
         <input type="button" class="buttonDepWith" value="Retirar" onclick="formulaWithdrawMali()">
         <button class="closeWithdraw" onclick="closeWithdraw()">&times;</button>
+        <button class="withdrawBackMali" onclick="withdrawBackMali()">&larr;</button>
     </section>
 
     <section class="withdrawGera hidden">
@@ -142,6 +152,7 @@
         <input type="text" class="inputWithdrawGera"></input>
         <input type="button" class="buttonDepWith" value="Retirar" onclick="formulaWithdrawGera()">
         <button class="closeWithdraw" onclick="closeWithdraw()">&times;</button>
+        <button class="withdrawBackGera" onclick="depositBackGera()">&larr;</button>
     </section>
     
     <section class="withdrawMaui hidden">
@@ -149,6 +160,7 @@
         <input type="text" class="inputWithdrawMaui"></input>
         <input type="button" class="buttonDepWith" value="Retirar" onclick="formulaWithdrawMaui()">
         <button class="closeWithdraw" onclick="closeWithdraw()">&times;</button>
+        <button class="withdrawBackMaui" onclick="depositBackMaui()">&larr;</button>
     </section>
 
     <!-- OVERLAYS -->
